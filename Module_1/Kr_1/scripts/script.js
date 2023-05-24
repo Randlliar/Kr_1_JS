@@ -42,19 +42,19 @@ var averageAge = (mercedes.carAge + BMW.carAge + audi.carAge) / 3;
 alert(averageAge);
 
 var atLeastOneForSale = (mercedes.forSale || BMW.forSale || audi.forSale);
-alert(atLeastOneForSale);
+alert('Хотя бы один автомобиль продаётся? ' + atLeastOneForSale);
 
 var allYoungerThanFive = (mercedes.carAge < 5 && BMW.carAge < 5 && audi.carAge < 5);
-alert(allYoungerThanFive);
+alert('Все авто младше 5 лет? ' + allYoungerThanFive);
 
 var atLeastOneHasLittleHp = (mercedes.hp < 250  && BMW.hp < 250  && audi.hp < 250 )
-alert(atLeastOneHasLittleHp);
+alert('Хоть один автомобиль имеет менее 250 лошадиных сил? ' + atLeastOneHasLittleHp);
 
 // ________________________________________________
 
-var car = audi;
+var car = BMW;
 
-if (car.model === mercedes.name && car.model === mercedes.model) {
+if (car.name === mercedes.name && car.model === mercedes.model) {
   alert('Мой любимый мерседес!');
 } else {
   alert('Это - ' + car.name + ' ' + car.model)
@@ -80,25 +80,26 @@ var russianColor = car.color;
 
 switch (russianColor) {
   case 'black':
-    alert('Черная');
+    russianColor = 'черная';
     break;
   case 'silver':
-    alert('Серебристый');
+    russianColor = 'серебристая';
     break;
   case 'red':
-    alert('красный');
+    russianColor = 'красная';
     break;
   case 'white':
-    alert('белый');
+    russianColor = 'белая';
     break;
   case 'gray':
-    alert('серый');
+    russianColor = 'серая';
     break;
   case 'blue':
-    alert('синий');
+    russianColor = 'синяя';
     break;
   default:
-    alert('Невозможно определить цвет автомобиля');
+    russianColor = 'невозможно определить цвет автомобиля';
     break;
 }
 
+alert('Цвет машины: ' + russianColor);
