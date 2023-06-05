@@ -51,8 +51,8 @@ newClient.phone = prompt("Введите телефон ");
 
 newClient.amounts = [];
 //+ equal parseInt
-while (confirm("Добавить покупку для клиента " + newClient.firstName)) {
-  newClient.amounts.push(+prompt('Введите сумму покупки клиента: ' + newClient.firstName));
+while (confirm(`Добавить покупку для клиента  ${newClient.firstName}`)) {
+  newClient.amounts.push(+prompt(`Введите сумму покупки клиента: ${newClient.firstName}`));
 }
 
 
@@ -130,7 +130,7 @@ function getAverageAmount(avg) {
 let showClients = ((arr) => {
 
   for (let i = 0; i < arr.length; i++) {
-    console.log("Клиент " + arr[i].firstName + " имеет среднюю сумму чека " + getAverageAmount(arr[i].amounts) + ". " + "День рожения клиента: " + getBirthday(arr[i].date));
+    console.log(`Клиент  ${arr[i].firstName}  имеет среднюю сумму чека  ${getAverageAmount(arr[i].amounts)}. День рождения клиента: ${getBirthday(arr[i].date)}`);
     // return "Клиент " + arr[i].firstName + " имеет среднюю сумму чека " + getAverageAmount(arr[i].amounts) + ". " + "День рожения клиента: " + getBirthday(arr[i].date);
   }
 })
@@ -188,7 +188,7 @@ function whoSpentMore(arr) {
 
     }
   }
-  console.log("Больше всех потратил " + personWithMaxSum + ". Сумма покупок: " + maxSum);
+  console.log(`Больше всех потратил ${personWithMaxSum}. Сумма покупок: ${ maxSum}`);
 }
 
 whoSpentMore(clients);
